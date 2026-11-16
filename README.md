@@ -5,9 +5,11 @@
 ### Featured project
 **[Cardiac MRI Segmentation](https://github.com/VICSTIC08/cardiac-mri-segmentation)** · PyTorch, NumPy, SciPy, pytest, GitHub Actions
 - End-to-end pipeline that turns cardiac MRI into the measurements cardiologists use: ejection fraction, ventricular volumes, myocardial mass
+- 8.2M-parameter residual attention U-Net trained on the public ACDC dataset (150 patients, 5 diagnosis groups)
 - **Dice 0.94 / 0.91 / 0.90** (LV / RV / myocardium) on 50 held-out patients, within 0.02 of the 2017 ACDC challenge winner
 - Ejection fraction within **2.5 points** of expert annotations (r = 0.988)
-- 48 tests in CI, leakage-free patient-level splits, one pre-registered test run, controlled ablation study
+- 5-model ablation: residual blocks and attention gates (+439K parameters) gave no measurable gain; the Dice loss did (+0.01 RV Dice)
+- 48 tests in CI, 23 merged pull requests, leakage-free patient-level splits, one pre-registered test run
 - v2 in progress: calibrated uncertainty, deep ensembles, out-of-distribution detection and a live demo
 
 ### Research
@@ -17,10 +19,10 @@
 - [**Van't Hoff Analysis of Fe(SCN)²⁺**](https://drive.google.com/file/d/1urw00XIk9UmA2tFzgOnq71XoJEmjlHNf/view): ΔH° and ΔS° from a Van't Hoff fit across 9 temperatures (R² = 0.973) with full uncertainty propagation
 
 ### Also
-- C++ PID control for VEX Robotics on an all-girls team; nearly tripled our autonomous score
+- C++ PID control for VEX Robotics on an all-girls team; tripled autonomous score
 - Only high schooler on Youreka Canada's national exec; led media across 7 cities (5,000+ followers, 200k+ views)
 - Built a 21-client ski coaching business (CSIA Level 2, $4.5k+ revenue)
-- RCM Level 8 Piano, First Class Honours with Distinction
+- RCM Level 8 Piano + Theory, First Class Honours with Distinction
 
 ### my free time
 gym · reading · photography · golf · sailing
