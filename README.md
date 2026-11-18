@@ -7,9 +7,9 @@
 - End-to-end pipeline that turns cardiac MRI into the measurements cardiologists use: ejection fraction, ventricular volumes, myocardial mass
 - 8.2M-parameter residual attention U-Net trained on the public ACDC dataset (150 patients, 5 diagnosis groups)
 - **Dice 0.94 / 0.91 / 0.90** (LV / RV / myocardium) on 50 held-out patients, within 0.02 of the 2017 ACDC challenge winner
-- Ejection fraction within **2.5 points** of expert annotations (r = 0.988)
+- LV ejection fraction mean error **2.5 points** vs. expert annotations (r = 0.988)
 - 5-model ablation: residual blocks and attention gates (+439K parameters) gave no measurable gain; the Dice loss did (+0.01 RV Dice)
-- 48 tests in CI, 23 merged pull requests, leakage-free patient-level splits, one pre-registered test run
+- 48 tests in CI, 23 merged pull requests, leakage-free patient-level splits, test set evaluated once
 - v2 in progress: calibrated uncertainty, deep ensembles, out-of-distribution detection and a live demo
 
 ### Research
